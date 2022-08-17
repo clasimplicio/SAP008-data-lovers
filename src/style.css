@@ -10,6 +10,8 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 font-family: "Caveat", cursive;
+margin-left: auto;
+margin-right: auto;
 }
 
 /*menu*/
@@ -21,6 +23,8 @@ font-family: "Caveat", cursive;
 .dp-menu ul{
     list-style-type: none;
     padding: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
     background-color: var(--cor-fundo);
     border-radius: 10px;
 }
@@ -56,9 +60,21 @@ font-family: "Caveat", cursive;
     display: block;
 }
 
-/*busca*/
+/*filtro e busca*/
+.sessao{
+    margin-top: 5vw;
+    margin-bottom: 1vw;
+    width: 100%;
+    display: block;
+}
+.filtro{
+
+}
+
 .buscar{
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
     width: 50%;
     border-radius: 10px;
@@ -97,4 +113,26 @@ font-family: "Caveat", cursive;
 .tipo{
     display: grid;
     box-sizing: border-box;
+}
+
+/*Quem somos*/
+.nos{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+.quem{
+    font-size: 2vw;
+    text-align: center;
+
+}
+.somos{
+    text-align: center;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+   
 }

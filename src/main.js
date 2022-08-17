@@ -7,7 +7,7 @@ window.addEventListener("load", ()=>printCards(arrayPokemon));
 //----------------CHAMANDO A FUNÇÃO SEARCHPOKEMON QUANDO DIGITAR ALGO NO INPUT ID SEARCH----------------
 document.getElementById("search").addEventListener("keyup", searchPokemon);
 // -------------------CHAMANDO FUNÇÃO TYPEFILTER NO CLICK-----------------------
-// document.getElementById("filtertype").addEventListener("click",()=>printCards(filterTyper(arrayPokemon, document.getElementById("").value)));
+//document.getElementById("filtertype").addEventListener("change",()=>printCards(filterTyper(arrayPokemon, document.querySelector(".typePoke").value, "type")));
 //----------------------CHAMANDO FUNÇÃO GENERATIONFILTER NO CLICK------------------
 // document.getElementById("filtergeneration").addEventListener("click",()=>printCards(filterGeneration(arrayPokemon, document.getElementById("filtergeneration").value )));
 
