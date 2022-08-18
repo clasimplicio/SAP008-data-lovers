@@ -1,4 +1,4 @@
-import {calCp, filterGeneration, filterType,sortData} from './data.js';
+import {calCp} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const arrayPokemon=data.pokemon;
@@ -8,27 +8,35 @@ window.addEventListener("load", ()=>printCp(arrayPokemon));
 function printCp(array){
     document.querySelector("#select").innerHTML=`
         
-            <option id="teste" selectd disableb value="algum">---SEU POKÉMON---</option>
+            <option id="teste" selectd disableb value="">---SEU POKÉMON---</option>
             ${
                 array.map((key)=>`
                     <option>${key.name}</option>
                 `)
             }
     `
-  //  console.log(document.querySelector("#teste").selectedIndex)
 }
 
-document.querySelector("#botão").addEventListener('click',() => {
+document.querySelector("#btnCalCp").addEventListener('click',() => {
     const cpDigitado = document.querySelector("#cpCapturado").value 
     const pokeSelecionado = document.querySelector("#select")
+    const indice = pokeSelecionado.selectedIndex    
+    if(indice==0){
+        document.querySelector("#resultado").innerHTML = "Escolha um pokémon"
+    }
+    const cpCalculado = calCp(arrayPokemon,indice-1,cpDigitado)
+    document.querySelector("#resultado").innerHTML = "Faltam "+ cpCalculado + " pro seu " + arrayPokemon[indice-1].name + " chegar ao CP máximo da espécie"
+})
+
+document.querySelector("#select").addEventListener('change',() => {
+    const pokeSelecionado = document.querySelector("#select")
     const indice = pokeSelecionado.selectedIndex
-    console.log(cpDigitado, indice)
-    console.log(calCp(arrayPokemon,indice-1,cpDigitado))
+    if(indice==0){
+        document.querySelector("#imgCp").innerHTML =""
+    }
+    document.querySelector("#imgCp").innerHTML =`
+    <img id="teste" src="${arrayPokemon[indice-1].img}">
+    `
 })
 
 
-/* function seleciona(){
-    let teste =  document.querySelector("#select")
-    let outroTeste = teste.selectedIndex
-    console.log(outroTeste)
-}  */

@@ -1,24 +1,31 @@
-import {calCp, filterGeneration, filterType,sortData} from './data.js';
+import {sortData, filterGeneration, filterType} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const arrayPokemon=data.pokemon;
-
-
 //-----------------CHAMANDO A FUNÇÃO PRINTCARDS QUANDO RECARREGAR A PÁGINA----------- 
 window.addEventListener("load", ()=>printCards(arrayPokemon));  
 //----------------CHAMANDO A FUNÇÃO SEARCHPOKEMON QUANDO DIGITAR ALGO NO INPUT ID SEARCH----------------
-document.querySelector("#search").addEventListener("keyup", searchPokemon);
-// -------------------CHAMANDO FUNÇÃO TYPEFILTER NO CLICK-----------------------
-//document.getElementById("filtertype").addEventListener("change",()=>printCards(filterTyper(arrayPokemon, document.querySelector(".typePoke").value, "type")));
-//----------------------CHAMANDO FUNÇÃO GENERATIONFILTER NO CLICK------------------
-// document.getElementById("filtergeneration").addEventListener("click",()=>printCards(filterGeneration(arrayPokemon, document.getElementById("filtergeneration").value )));
-
-// console.log(sortData(arrayPokemon))
-//-----------------------BUSCAR POKÉMON PELO NOME-----------------------------
-function searchPokemon(){
-    let searchFor=document.querySelector("#search").value.toLowerCase()
+document.querySelector("#search").addEventListener("keyup", ()=>{
+    const searchFor=document.querySelector("#search").value.toLowerCase()
     printCards(arrayPokemon.filter((key) => key.name.includes(searchFor)))
 }
+);
+// -------------------CHAMANDO FUNÇÃO FILTERTYPE---------------------
+document.querySelector(".typePoke").addEventListener("change", ()=>{
+    const getValue= document.querySelector(".typePoke").value
+    printCards(filterType(arrayPokemon, getValue))
+})
+//---------------------------CHAMANDO FUNÇÃO FILTERGENERATION--------------------
+document.querySelector(".generationPoke").addEventListener("change", ()=>{
+    const getValue= document.querySelector(".generationPoke").value
+    printCards(filterGeneration(arrayPokemon, getValue))
+})
+
+
+// -------------------CHAMANDO FUNÇÃO FILTERS NO CLICK-----------------------
+//document.querySelector("filtertype").addEventListener("change",()=>printCards(filterTyper(arrayPokemon, document.querySelector(".typePoke").value, "type")));
+//document.querySelector("filtergeneration").addEventListener("click",()=>printCards(filterGeneration(arrayPokemon, document.getElementById("filtergeneration").value )));
+
 //------------------------------PRINT DE CARDS NA DIV CARDS----------------------------------
 function printCards(array) {
     document.querySelector("#cards").innerHTML = array.map((key) =>

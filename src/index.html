@@ -33,34 +33,30 @@
    <section class="sessao">
     <nav class="filtro">
       <ul class="seletores">
-        <li><a href="">Tipos</a>
-          <ul>
-            <li><a data-type="normal" class="typePoke">Normal</a></li>
-            <li><a data-type="fighting" class="typePoke">Fighting</a></li>
-            <li><a data-type="flying" class="typePoke">Flying</a></li>
-            <li><a data-type="poison" class="typePoke">Poison</a></li>
-            <li><a data-type="ground" class="typePoke">Ground</a></li>
-            <li><a data-type="rock" class="typePoke">Rock</a></li>
-            <li><a data-type="bug" class="typePoke">Bug</a></li>
-            <li><a data-type="ghost" class="typePoke">Ghost</a></li>
-            <li><a data-type="steel" class="typePoke">Steel</a></li>
-            <li><a data-type="fire" class="typePoke">Fire</a></li>
-            <li><a data-type="water" class="typePoke">Water</a></li>
-            <li><a data-type="grass" class="typePoke">Grass</a></li>
-            <li><a data-type="electric" class="typePoke">Electricl</a></li>
-            <li><a data-type="psychic" class="typePoke">Psychic</a></li>
-            <li><a data-type="ice" class="typePoke">Ice</a></li>
-            <li><a data-type="dragon" class="typePoke">Dragon</a></li>
-            <li><a data-type="dark" class="typePoke">Dark</a></li>
-            <li><a data-type="fairy" class="typePoke">Fairy</a></li>
-          </ul>
-        </li>
-        <li><a href=""> Geraçoes</a>
-          <ul>
-            <li><a href="kanto" class="typePoke" style="background: #80BB1D;">Kanto (1)</a></li>
-            <li><a href="#gen2" class="typePoke" style="background: #CAC02E;">Johto (2)</a></li>
-          </ul>
-        </li>
+          <select class="typePoke">
+            <option value="normal">Normal</option>
+            <option value="fighting">Fighting</option>
+            <option value="flying">Flying</option>
+            <option value="poison">Poison</option>
+            <option value="ground">Ground</option>
+            <option value="rock">Rock</option>
+            <option value="bug">Bug</option>
+            <option value="ghost">Ghost</option>
+            <option value="steel">Steel</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="grass">Grass</option>
+            <option value="electric">Electricl</option>
+            <option value="psychic">Psychic</option>
+            <option value="ice">Ice</option>
+            <option value="dragon">Dragon</option>
+            <option value="dark">Dark</option>
+          </select>
+          <select class="generationPoke">
+            <option value="kanto">Kanto (1)</option>
+            <option value="johto">Johto (2)</option>
+          </select>
+  
       </ul>
       <div class="opçoes">
 
@@ -68,7 +64,7 @@
     </nav>
    </section>
    <input type="text" class="buscar" placeholder="Buscar um Pokémon" id="search">
-    <div class="card" id="cards"></div>
-    <script src="main.js" type="module"></script>
+   <div class="card" id="cards"></div>
+   <script src="main.js" type="module"></script>
   </body>
 </html>
