@@ -13,12 +13,25 @@ document.querySelector("#search").addEventListener("keyup", ()=>{
 // -------------------CHAMANDO FUNÇÃO FILTERTYPE---------------------
 document.querySelector(".typePoke").addEventListener("change", ()=>{
     const getValue= document.querySelector(".typePoke").value
-    printCards(filterType(arrayPokemon, getValue))
+    if(getValue==="todos"){
+        printCards(arrayPokemon)
+    }else{
+        printCards(filterType(arrayPokemon, getValue))
+    }
 })
 //---------------------------CHAMANDO FUNÇÃO FILTERGENERATION--------------------
 document.querySelector(".generationPoke").addEventListener("change", ()=>{
     const getValue= document.querySelector(".generationPoke").value
-    printCards(filterGeneration(arrayPokemon, getValue))
+    if(getValue=="todos"){
+        printCards(arrayPokemon)
+    }else{
+        printCards(filterGeneration(arrayPokemon, getValue))
+    }
+})
+
+document.querySelector(".sort").addEventListener("change", ()=>{
+    const getValue= document.querySelector(".sort").value
+    printCards(sortData(arrayPokemon,getValue))
 })
 
 
