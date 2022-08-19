@@ -11,7 +11,7 @@ function printCp(array){
             <option id="teste" selectd disableb value="">---SEU POKÉMON---</option>
             ${
                 array.map((key)=>`
-                    <option>${key.name}</option>
+                    <option class="options" >${key.name}</option>
                 `)
             }
     `
@@ -35,7 +35,7 @@ document.querySelector("#select").addEventListener('change',() => {
         document.querySelector("#imgCp").innerHTML =""
     }
     document.querySelector("#imgCp").innerHTML =`
-    <img id="teste" src="${arrayPokemon[indice-1].img}">
+    <img class="img" id="teste" src="${arrayPokemon[indice-1].img}">
     `
 })
 

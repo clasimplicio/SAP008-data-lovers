@@ -148,6 +148,8 @@ body {
 
 }
 
+
+
 #calCp {
     background-color: rgb(255, 255, 255);
     border-radius: 3vw;
@@ -160,6 +162,9 @@ body {
     height: auto;
     margin: auto;
 
+}
+.img{
+    height: 30vh;
 }
 
 #cpCapturado {
@@ -214,4 +219,16 @@ body {
 #resultado{
     text-align: center;
     font-size: 2vw;
+}
+
+@media (max-width: 600px)
+{
+  #calCp
+   {   
+    width: 90vw;
+   }
+
+   .img{
+       height: 15vh;
+   }
 }

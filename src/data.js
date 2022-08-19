@@ -6,12 +6,8 @@
 } */
 
 
-export const filterType = (data, requirement) => {
-  return data.filter((key) => key.type.includes(requirement))
-}
-
-export const filterGeneration = (data, requirement) => {
-  return data.filter((key) => key.generation.name.includes(requirement))
+export const filters = (data, requirement, filterType) => {
+  return (filterType=="type") ? data.filter((key) => key.type.includes(requirement)) : data.filter((key) => key.generation.name.includes(requirement))
 }
 
 export const sortData = (data, sort) => {
