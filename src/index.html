@@ -13,14 +13,14 @@
       <nav class="dp-menu">
         <ul>
           <li><a class="pokeInfo" href="\index.html"><img src="\img\pokeinfo.PNG" alt=""></a></li>
-          <li><a href="\cp.html">Estimativa de CP</a></li>
+          <li><a href="\cp.html">CP</a></li>
           <li><a href="#">Melhores</a>
             <ul>
-              <li><a href="#">Ataques (ATK)</a></li>
-              <li><a href="#">Defesas (DEF)</a></li>
+              <li><a href="\atk.html">Ataques (ATK)</a></li>
+              <li><a href="\def.html">Defesas (DEF)</a></li>
             </ul>
           </li>
-          <li><a href="#">Quem somos</a>
+          <li><a href="#">Sobre</a>
             <ul>
               <li><a href="\quem.html">Sobre o site</a></li>
               <li><a href="\contato.html">Contato</a></li>
@@ -34,29 +34,29 @@
     <nav class="filtro">
       <ul class="seletores">
           <select class="typePoke">
-            <option value="todos">Todos os tipos</option>
-            <option value="normal">Normal</option>
-            <option value="fighting">Fighting</option>
-            <option value="flying">Flying</option>
-            <option value="poison">Poison</option>
-            <option value="ground">Ground</option>
-            <option value="rock">Rock</option>
-            <option value="bug">Bug</option>
-            <option value="ghost">Ghost</option>
-            <option value="steel">Steel</option>
-            <option value="fire">Fire</option>
-            <option value="water">Water</option>
-            <option value="grass">Grass</option>
-            <option value="electric">Electricl</option>
-            <option value="psychic">Psychic</option>
-            <option value="ice">Ice</option>
-            <option value="dragon">Dragon</option>
-            <option value="dark">Dark</option>
+            <option value="todos" >Tipos</option>
+            <option value="normal" style="background-color: rgb(168,168,120);">Normal</option>
+            <option value="fighting" style="background-color: rgb(192,32,56)">Fighting</option>
+            <option value="flying" style="background-color: rgb(168,144,240)">Flying</option>
+            <option value="poison" style="background-color: rgb(160,64,160)">Poison</option>
+            <option value="ground" style="background-color: rgb(224,192,104)">Ground</option>
+            <option value="rock" style="background-color: rgb(184,160,56)">Rock</option>
+            <option value="bug" style="background-color: rgb(168,184,32)">Bug</option>
+            <option value="ghost" style="background-color: rgb(112,88,152)">Ghost</option>
+            <option value="steel" style="background-color: rgb(184,184,208)">Steel</option>
+            <option value="fire" style="background-color: rgb(240,128,48)">Fire</option>
+            <option value="water" style="background-color: rgb(104,144,240)">Water</option>
+            <option value="grass" style="background-color: rgb(120,200,80)">Grass</option>
+            <option value="electric" style="background-color: rgb(248,208,48)">Electricl</option>
+            <option value="psychic" style="background-color: rgb(248,88,136)">Psychic</option>
+            <option value="ice" style="background-color: rgb(152,216,216)">Ice</option>
+            <option value="dragon" style="background-color: rgb(112,56,248)">Dragon</option>
+            <option value="dark" style="background-color: rgb(112,88,72)">Dark</option>
           </select>
           <select class="generationPoke">
-            <option value="todos">Todas gerações</option>
-            <option value="kanto">Kanto (1)</option>
-            <option value="johto">Johto (2)</option>
+            <option value="todos">Gerações</option>
+            <option value="kanto" style="background-color: rgb(128,187,29);">Kanto</option>
+            <option value="johto" style="background-color:rgb(202,192,46)">Johto</option>
           </select>
           <select class="sort">
             <option value="cres">Crescente</option>
@@ -64,15 +64,15 @@
             <option value="a-z">A-Z</option>
             <option value="z-a">Z-A</option>
           </select>
-  
       </ul>
-      <div class="opçoes">
-
-      </div>
+      <div class="opçoes"></div>
     </nav>
    </section>
    <input type="text" class="buscar" placeholder="Buscar um Pokémon" id="search">
    <div class="card" id="cards"></div>
+   <footer class="pe">
+    <nav>Site desenvolvido por <a style= color:rgb(255,255,255) href="https://github.com/clasimplicio">Clarissa Simplicio</a> e <a style= color:rgb(255,255,255) href="https://github.com/Gleyciane-Macena">Gleyciane Macena</a>.</nav>
+   </footer>
    <script src="main.js" type="module"></script>
   </body>
 </html>
