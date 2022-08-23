@@ -12,29 +12,12 @@ export const filters = (data, requirement, filterType) => {
 
 export const sortData = (data, sort) => {
   if (sort == "a-z"|| sort == "z-a") {
-    let arraySort = data.sort((a, b) => {
-      if (a.name > b.name) {
-        return 1
-      }
-      if (a.name < b.name) {
-        return -1
-      }
-      return 0
-    })
+    let arraySort = data.sort((a, b) => (a.name > b.name) ? 1: -1)
     return (sort=="a-z") ? arraySort : arraySort.reverse() 
   }else{
-    let arraySort = data.sort((a, b) => {
-      if (a.num > b.num) {
-        return 1
-      }
-      if (a.num < b.num) {
-        return -1
-      }
-      return 0
-    })
+    let arraySort = data.sort((a, b) => (a.num > b.num) ? 1: -1)
       return (sort=="cres") ? arraySort : arraySort.reverse()  
   }
-
 };
 
 export const calCp = (data, position, cp) => {
