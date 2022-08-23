@@ -20,7 +20,6 @@ body {
     border-radius: 10px;
     min-width: 100px;
 }
-
 .dp-menu ul {
     list-style-type: none;
     padding: 0;
@@ -29,12 +28,10 @@ body {
     background-color: var(--cor-fundo);
     border-radius: 10px;
 }
-
 .dp-menu ul li {
     display: inline-block;
     position: relative;
 }
-
 .dp-menu ul li a {
     color: var(--cor-primaria);
     text-decoration: none;
@@ -42,7 +39,6 @@ body {
     padding: 10px;
     transition: background .3s;
 }
-
 .dp-menu ul li a:hover {
     background-color: var(--cor-hover);
     border-radius: 10px;
@@ -55,15 +51,12 @@ body {
     left: 0;
     position: absolute;
 }
-
 .dp-menu ul li:hover ul {
     display: block;
 }
-
 .dp-menu ul ul {
     width: 150px;
 }
-
 .dp-menu ul ul li a {
     display: block;
 }
@@ -76,10 +69,6 @@ body {
     display:block;
     text-align: center;
     font-size-adjust: 15px;
-}
-.filtro {
-}
-.seletores{   
 }
 .typePoke, .generationPoke, .sort{
     border-top: 2px solid rgb(0, 0, 0);
@@ -111,7 +100,6 @@ body {
     filter: drop-shadow(0 5px 3px rgb(0, 0, 0));
     max-width: 70vw;
 }
-
 .cardPokemon {
     background-color: rgb(255, 255, 255);
     border-radius: 3vw;
@@ -126,35 +114,14 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-.imgCard{
+.imgCard {
     max-width: 10vw;
     object-fit: contain;
+    filter:drop-shadow(5px 3px rgb(106, 105, 105));
 }
 .tipo {
     display: grid;
     box-sizing: border-box;
-}
-
-/*Sobre*/
-.nos {
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    margin-top: 5vw;
-    margin-bottom: 15vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    padding: 3vw;
-}
-.quem {
-    font-size-adjust: 2vw;
-    text-align: center;
-}
-.somos {
-    text-align: center;
-    font-size-adjust: 1.5vw;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
 }
 
 /*CP*/
@@ -178,7 +145,6 @@ body {
 .img{
     object-fit:contain;
 }
-
 #cpCapturado {
     margin-top: 2%;
     padding: 2%;
@@ -188,11 +154,9 @@ body {
     text-align: center;
     font-size: 2vw;
 }
-
 #cpCapturado:hover {
     background-color: var(--cor-hover);
 }
-
 #btnCalCp {
     margin-top: 2%;
     padding: 2%;
@@ -203,11 +167,9 @@ body {
     border-radius: 10px;
     transition: background .3s;
 }
-
 #btnCalCp:hover {
     background-color: var(--cor-hover);
 }
-
 #select{
     text-transform: capitalize;
     padding: 2%;
@@ -217,20 +179,46 @@ body {
     transition: background .3s;
     font-family: "Caveat", cursive;
     font-size: 2vw;
-
 }
-
 #select:hover {
     background-color: var(--cor-hover);
 }
-
 #imgCp{
     margin: auto;
 }
-
 #resultado{
     text-align: center;
     font-size: 2vw;
+}
+
+/*Sobre*/
+.nos {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 5vw;
+    margin-bottom: 15vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 3vw;
+}
+.quem, .gostou {
+    font-size-adjust: 2vw;
+    text-align: center;
+}
+.somos, .contatos {
+    text-align: center;
+    font-size-adjust: 1.5vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+.contato{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 5vw;
+    margin-bottom: 14vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 3vw;
 }
 
 /*footer*/
@@ -262,7 +250,12 @@ body {
    .seletores{
     text-align: center;
     margin-right: 10vw;
-    
+   }
+   .contato{
+    margin-top: 20vw;
+    margin-bottom: 35vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
    }
    .typePoke, .generationPoke, .sort{
     width: 20vw;
