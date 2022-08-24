@@ -1,25 +1,23 @@
-import {melhores} from './data.js';
+import {sortData} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const arrayPokemon=data.pokemon;
 
-window.addEventListener("load", ()=>printCards(arrayPokemon))
+sortData(arrayPokemon, "atk")
 
-/* ordenar:function(){
+console.log(arrayPokemon)
+window.addEventListener("load", ()=>printMelhores(arrayPokemon))
 
-}*/
 
 
-/*function printCards(array) {
-    document.querySelector("#cards").innerHTML = array.map((key) =>
+function printMelhores(array) {
+    document.querySelector(".atk").innerHTML = array.map((key) =>
         `
-        <div class="cardPokemon">
-        <p class="registro" >${key.num}</p>
-        <h1>${key.name}</h1>
-        <img class="imgCard" src="${key.img}" alt="${key.name}">
-        <p class="tipo" >${key.type.join(" ")}</p>
-        </div>
+            <p class="registro" >${key.num}</p>
+            <h1>${key.name}</h1>
+            <img class="imgCard" src="${key.img}" alt="${key.name}">
+            <p>${key.stats['base-attack']}</p>
+            
         `
     ).join("")
 }
-*/
