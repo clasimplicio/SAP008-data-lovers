@@ -265,3 +265,31 @@ body {
        height: 15vh;
    }
 }
+
+.container{
+    border: solid 2px red;
+
+}
+
+.geralInfo{
+    border: solid 2px blue;
+
+}
+
+.res-fra{
+    border: solid 2px yellow;
+    
+}
+
+.stats{
+    border: solid 2px green;
+}
+
+.ataques{
+    border: solid 2px purple;
+
+}
+.ataques-especiais{
+    border: solid 2px orangered;
+
+}

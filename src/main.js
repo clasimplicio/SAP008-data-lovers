@@ -39,13 +39,15 @@ document.querySelector(".sort").addEventListener("change", ()=>{
 //------------------------------PRINT DE CARDS NA DIV CARDS----------------------------------
 function printCards(array) {
     document.querySelector("#cards").innerHTML = array.map((key) =>
-        `   
+        `
+            <a href="/info.html?info=${key.num}">
                 <div class="cardPokemon">
                     <p class="registro" >${key.num}</p>
                     <h1>${key.name}</h1>
                     <img class="imgCard" src="${key.img}" alt="${key.name}">
                     <p class="tipo" >${key.type.join(" ")}</p>
                 </div>
+            </a>
         `
     ).join("")
 }
