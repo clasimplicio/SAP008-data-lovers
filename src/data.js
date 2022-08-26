@@ -21,7 +21,19 @@ export const sortData = (data, sort) => {
       }
     })
     return arraySort
+  }else if(sort=="def"){
+    let arraySort = data.sort((a,b) =>{
+      if(parseInt(a.stats["base-defense"]) < parseInt(b.stats['base-defense'])){
+        return 1
+      }else if(parseInt(a.stats['base-defense']) > parseInt(b.stats['base-defense'])){
+        return -1
+      }else{
+        return 0
+      }
+    })
+    return arraySort
   }
+  
 };
 
 export const calCp = (data, position, cp) => {
