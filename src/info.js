@@ -12,17 +12,23 @@ document.querySelector(".container").innerHTML=
 `
     <div class="geralInfo">
         <img class="img-info" src="${pokeSelected.img}" alt="${pokeSelected.name}">
-        <h1 class="nome-info" >${pokeSelected.name}</h1>
-        <p class="id-info">${pokeSelected.num}</p>
-        <p class="rarity-info">${pokeSelected['pokemon-rarity']}</p>
+        <div class="titulos-info">
+            <p class="id-info">#${pokeSelected.num}</p>
+            <h1 class="nome-info" >${pokeSelected.name}</h1>
+            <p class="rarity-info">${pokeSelected['pokemon-rarity']}</p>
+        </div>
     </div>
+
     <div class="res-fra">
-        <p class="titulo-info">TIPO DO POKÉMON</p>
-        <p>${pokeSelected.type.join(" ")}</p>
-        <p class="titulo-info">RESISTÊNCIAS</p>
-        <p>${pokeSelected.resistant.join(" ")}</p>
-        <p class="titulo-info">"FRAQUEZAS"<p>
-        <p>${pokeSelected.weaknesses.join(" ")}</p>
+        <p class="titulo-res-fra">${pokeSelected.type.join(" ")}</p>
+        <div class="res">
+            <p class="titulo-info">RESISTÊNCIAS</p>
+            <p>${pokeSelected.resistant.join(" ")}</p>
+        </div>
+        <div class="fra">    
+            <p class="titulo-info">FRAQUEZAS<p>
+            <p>${pokeSelected.weaknesses.join(" ")}</p>
+        </div>
     </div>
     <div class="stats">
         <p class="titulo-info">ATRIBUTOS BASE</p>

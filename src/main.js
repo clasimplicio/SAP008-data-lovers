@@ -38,7 +38,7 @@ document.querySelector(".sort").addEventListener("change", ()=>{
 
 //------------------------------PRINT DE CARDS NA DIV CARDS----------------------------------
 function printCards(array) {
-    document.querySelector("#cards").innerHTML = array.map((key) =>
+    document.querySelector(".card").innerHTML = array.map((key) =>
         `
             <a href="/info.html?info=${key.num}">
                 <div class="cardPokemon">
