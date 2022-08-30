@@ -91,10 +91,15 @@ body {
 }
 
 /*cards*/
+a {
+    text-decoration: none;
+    color: black;
+}
 .card {
     align-content: center;
     display: grid;
     text-transform: capitalize;
+    text-decoration: none;
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1vw;
     filter: drop-shadow(0 5px 3px rgb(0, 0, 0));
@@ -105,6 +110,7 @@ a{
     color:black;
 }
 .cardPokemon {
+    text-decoration: none;
     background-color: rgb(255, 255, 255);
     border-radius: 3vw;
     box-shadow: 0 1vw 1vw rgb(106, 105, 105);
@@ -199,6 +205,29 @@ a{
 #resultado{
     text-align: center;
     font-size: 2vw;
+}
+
+/*tabela*/
+.tatk, .tdef{
+    margin-top: 2vw;
+    text-align: center;
+}
+.ctable, .cdtable {
+    background-color: var(--cor-fundo);
+    border-radius: 50px;
+    color: rgb(250, 250, 250);
+    margin: 3vw;
+    padding: 10px;
+}
+.table, .dtable {
+    text-transform: capitalize;
+    margin-top: 1.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1.5vw;
+    background-color: var(--cor-primaria);
 }
 
 /*Sobre*/
@@ -356,6 +385,7 @@ a{
 
 }
 
+
 @media (max-width: 600px){
   #calCp
    {   
@@ -382,4 +412,3 @@ a{
    .img{
        height: 15vh;
    }
-}
