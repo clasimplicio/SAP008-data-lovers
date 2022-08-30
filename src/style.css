@@ -91,6 +91,10 @@ body {
 }
 
 /*cards*/
+a {
+    text-decoration: none;
+    color: black;
+}
 .card {
     align-content: center;
     display: grid;
