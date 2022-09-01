@@ -514,6 +514,156 @@ describe("sortData",()=>{
     
     expect(sortData(atual, "decres")).toEqual(resultado);
   });
+
+  it("deveria retornar os pokémons em ordem de ataque decrescente", () => {
+    
+    const atual = [
+      {
+        "num": "094",
+        "name": "gengar",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "149"
+        }
+      },
+      {
+        "num": "226",
+        "name": "mantine",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      },
+      {
+        "num": "196",
+        "name": "espeon",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "175"
+        }
+      },
+      {
+        "num": "227",
+        "name": "skarmory",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      }
+    ];
+
+    const resultado = [
+      {
+        "num": "094",
+        "name": "gengar",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "149"
+        }
+      },
+      {
+        "num": "196",
+        "name": "espeon",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "175"
+        }
+      },
+      {
+        "num": "226",
+        "name": "mantine",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      },
+      {
+        "num": "227",
+        "name": "skarmory",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      }
+    ];
+    
+    expect(sortData(atual, "atk")).toEqual(resultado);
+  });
+  it("deveria retornar os pokémons em ordem de defesa decrescente", () => {
+    
+    const atual = [
+      {
+        "num": "094",
+        "name": "gengar",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "149"
+        }
+      },
+      {
+        "num": "226",
+        "name": "mantine",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      },
+      {
+        "num": "196",
+        "name": "espeon",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "175"
+        }
+      },
+      {
+        "num": "227",
+        "name": "skarmory",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      }
+    ];
+
+    const resultado = [
+      {
+        "num": "226",
+        "name": "mantine",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      },
+      {
+        "num": "227",
+        "name": "skarmory",
+        "stats": {
+          "base-attack": "148",
+          "base-defense": "226"
+        }
+      },
+      {
+        "num": "196",
+        "name": "espeon",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "175"
+        }
+      },
+      {
+        "num": "094",
+        "name": "gengar",
+        "stats": {
+          "base-attack": "261",
+          "base-defense": "149"
+        }
+      }
+  
+    ];
+    
+    expect(sortData(atual, "def")).toEqual(resultado);
+  });
 });
 //------------------------------------------FILTERS----------------------------------------------
 describe("filters",()=> {

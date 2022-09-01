@@ -96,7 +96,7 @@ Esses objetivos estão listados a seguir:
 Para a excução correta do projeto, planejamos um protótimo capaz de suprir as necessidades de nosso 
 publico alvo. Partindo de nossas histórias de usuario.
 1- Eu como jogador profissional de pokemon go, quero algo capaz de me fronecer os tipos de pokemon para facilitar minha escolha na hora de capturar um pokemon.
-2- 
+2- Eu como um menino curioso, quero poder vizualizar vários pokémons de uma vez para conhecer mais espécies 
 
 Uma vez tendo essa referência seguimos para o desenvolvimento de dois protótipos. Um voltado para desktop e outro
 para mobile.
