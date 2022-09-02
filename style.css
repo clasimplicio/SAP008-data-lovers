@@ -91,16 +91,26 @@ body {
 }
 
 /*cards*/
+a{
+    text-decoration: none;
+    color: black;
+}
 .card {
     align-content: center;
     display: grid;
     text-transform: capitalize;
+    text-decoration: none;
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1vw;
     filter: drop-shadow(0 5px 3px rgb(0, 0, 0));
     max-width: 70vw;
 }
+a{
+    text-decoration: none;
+    color:black;
+}
 .cardPokemon {
+    text-decoration: none;
     background-color: rgb(255, 255, 255);
     border-radius: 3vw;
     box-shadow: 0 1vw 1vw rgb(106, 105, 105);
@@ -113,7 +123,13 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: background .3s;
+
 }
+.cardPokemon:hover {
+    background-color: var(--cor-hover);
+}
+
 .imgCard {
     max-width: 10vw;
     object-fit: contain;
@@ -191,6 +207,29 @@ body {
     font-size: 2vw;
 }
 
+/*tabela*/
+.tatk, .tdef{
+    margin-top: 2vw;
+    text-align: center;
+}
+.ctable, .cdtable {
+    background-color: var(--cor-fundo);
+    border-radius: 50px;
+    color: rgb(250, 250, 250);
+    margin: 3vw;
+    padding: 10px;
+}
+.table, .dtable {
+    text-transform: capitalize;
+    margin-top: 1.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1.5vw;
+    background-color: var(--cor-primaria);
+}
+
 /*Sobre*/
 .nos {
     background-color: rgb(255, 255, 255);
@@ -237,8 +276,156 @@ body {
     color: var(--cor-primaria);
 }
 
-@media (max-width: 600px)
-{
+
+/* INFO */
+.container{
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.geralInfo{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-info{
+    align-self: flex-start;
+    margin-right: 1vw;
+}
+.id-info{
+    font-size: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    color:rgb(106, 105, 105)
+ 
+}
+.nome-info{
+    text-transform: capitalize;
+    font-size: 7vh;
+    margin-top: 0;
+    margin-bottom: 0;
+ 
+}
+.rarity-info{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    color:rgb(106, 105, 105)
+
+}
+
+
+.bloco{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+}
+.fra-res{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 4%;
+    margin-bottom: 3vh;
+    border-radius: 0 0 10px 10px;
+    flex-wrap: wrap;
+}
+.res-fra{
+    
+    border-radius: 10px;
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    
+}
+.titulo-res-fra{
+    background-color: var(--cor-fundo);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 3%;
+    color: white;
+    font-size: 100%;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+}
+ .res{
+    background-color: rgba(0, 128, 0, 0.466) ;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 4%;
+    margin-bottom: 2%;
+}
+
+.fra{
+    background-color: rgba(255, 0, 0, 0.397);
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 4%;
+    border-bottom: auto;
+    font-size: 100%;
+
+
+}
+.titulo-info{
+    text-align: center;
+    background-color: var(--cor-fundo);
+    color: white;
+    padding: 3%;
+    font-size: 100%;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.stats{
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+
+}
+.table-stats{
+    text-align: center;
+    padding: 5%;
+    margin: auto;
+}
+.ataques{
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.atk-g{
+    background: var(--cor-primaria);
+    margin-bottom: 3vh;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 5%;
+    text-transform: capitalize;
+
+}
+.table-atk{
+    background: var(--cor-primaria);
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+    padding: 2%;
+}
+caption{
+    color: var(--cor-primaria);
+    background: var(--cor-hover);
+    padding: 3%;  
+    border-radius: 10px 10px 0 0;
+
+}
+
+
+@media (max-width: 600px){
   #calCp
    {   
     width: 90vw;
@@ -264,48 +451,4 @@ body {
    .img{
        height: 15vh;
    }
-}
-
-.container{
-    border: solid 2px red;
-
-}
-
-.geralInfo{
-    border: solid 2px blue;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: pink;
-    margin: auto;
-
-}
-.img-info{
-    background-color: blue;
-}
-.nome-info{
-    background-color: red;
-}
-.id-info{
-    background-color: yellow;
-}
-.rarity-info{
-    background-color: green;
-}
-
-.res-fra{
-    border: solid 2px yellow;
-    
-}
-
-.stats{
-    border: solid 2px green;
-}
-
-.ataques{
-    border: solid 2px purple;
-
-}
-.ataques-especiais{
-    border: solid 2px orangered;
-
 }
