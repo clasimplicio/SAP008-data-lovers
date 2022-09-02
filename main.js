@@ -40,7 +40,7 @@ document.querySelector(".sort").addEventListener("change", ()=>{
 function printCards(array) {
     document.querySelector(".card").innerHTML = array.map((key) =>
         `
-            <a href="/info.html?info=${key.num}">
+            <a href="info.html?info=${key.num}">
                 <div class="cardPokemon">
                     <p class="registro" >${key.num}</p>
                     <h1>${key.name}</h1>
